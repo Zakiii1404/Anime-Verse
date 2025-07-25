@@ -1,0 +1,6 @@
+.card-img-top {
+    border-top-left-radius: 0.5rem; /* Hoặc dùng giá trị giống .card */
+    border-top-right-radius: 0.5rem;
+    object-fit: cover; /* Đảm bảo ảnh lấp đầy */
+    height: 150px;    /* Hoặc đặt chiều cao cố định */
+}
