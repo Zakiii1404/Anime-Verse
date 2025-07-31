@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Naruto Uzumaki - Thông tin chi tiết | AnimeVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">AnimeVerse</a>
+      <div>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="../list.html">Danh sách</a></li>
+          <li class="nav-item"><a href="#" onclick="showSearch()">Nhân vật</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="characterSearch" style="display: none; margin-top: 10px;">
+      <input type="text" id="searchInput" placeholder="Nhập tên nhân vật...">
+      <button onclick="searchCharacter()">Tìm kiếm</button>
+    </div>
+  </nav>
+
+  <!-- Tiêu đề -->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="https://i.pinimg.com/736x/2c/6b/bb/2c6bbb7696f09017d7dd9117e0f3258a.jpg" alt="Naruto" style="width: 200px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <div class="col-md-8">
+        <h1 class="text-warning">Naruto Uzumaki</h1>
+        <p><strong>Vai trò:</strong> Ninja làng Lá, Hokage Đệ Thất</p>
+        <p><strong>Biệt danh:</strong> Ninja số một gây rối</p>
+        <p><strong>Năng lực:</strong> Chakra Cửu Vĩ, Rasengan, Chế độ Tiên Nhân, Lục Đạo</p>
+        <p><strong>Xuất hiện lần đầu:</strong> Tập 1 (Anime) / Chapter 1 (Manga)</p>
+        <p><strong>Link xem:</strong> 
+          <a href="https://animevietsubtv.io/phim/naruto-shippuden-5/" target="_blank" class="btn btn-outline-warning btn-sm">AnimeVietsub</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nội dung mô tả -->
+  <div class="container mb-5">
+    <h3>Giới thiệu</h3>
+    <p>
+      Naruto Uzumaki là nhân vật chính trong loạt anime Naruto. Sinh ra với Cửu Vĩ phong ấn trong người, cậu lớn lên trong sự cô lập và bị xa lánh. Tuy nhiên, Naruto không từ bỏ, cậu luôn nỗ lực để được công nhận và trở thành Hokage – người đứng đầu làng Lá. Trải qua nhiều trận chiến, Naruto trở thành anh hùng và mang lại hòa bình cho thế giới nhẫn giả.
+    </p>
+
+    <h4>Tính cách và sức mạnh</h4>
+    <ul>
+      <li>Lạc quan, hài hước và không bao giờ bỏ cuộc</li>
+      <li>Sở hữu lượng chakra khổng lồ và sức mạnh thể chất phi thường</li>
+      <li>Kỹ thuật nổi bật: Rasengan, Phân thân chi thuật, Chế độ Tiên Nhân</li>
+      <li>Có Cửu Vĩ Kurama bên trong và đạt được sức mạnh Lục Đạo</li>
+      <li>Là Hokage Đệ Thất – biểu tượng của hòa bình và sức mạnh</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 AnimeVerse. Trang thông tin nhân vật Naruto Uzumaki.
+  </footer>
+
+  <!-- Script tìm kiếm -->
+  <script>
+    function showSearch() {
+      document.getElementById("characterSearch").style.display = "block";
+    }
+
+    function searchCharacter() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const characters = {
+        "naruto": "../characters/naruto.html",
+        "sakura": "../characters/sakura.html",
+        "sasuke": "../characters/sasuke.html",
+        "luffy": "../characters/luffy.html",
+        "sanji": "../characters/sanji.html",
+        "zoro": "../characters/zoro.html",
+        "goku": "../characters/goku.html",
+        "vegeta": "../characters/vegeta.html",
+        "tanjiro": "../characters/tanjiro.html",
+        "doraemon": "../characters/doraemon.html",
+        "nobita": "../characters/nobita.html",
+        "shizuka": "../characters/shizuka.html",
+      };
+
+      if (characters[query]) {
+        window.location.href = characters[query];
+      } else {
+        alert("Không tìm thấy nhân vật!");
+      }
+    }
+  </script>
+
+</body>
+</html>

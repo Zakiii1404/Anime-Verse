@@ -11,18 +11,23 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">AnimeVerse</a>
+      <a class="navbar-brand" href="../index.html">AnimeVerse</a>
       <div>
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="../index.html">Trang chủ</a></li>
           <li class="nav-item"><a class="nav-link" href="../list.html">Danh sách</a></li>
-          <li class="nav-item"><a class="nav-link" href="../gioi-thieu.html">Giới thiệu</a></li>
+          <li class="nav-item"><a href="#" onclick="showSearch()">Nhân vật</a></li>
         </ul>
       </div>
     </div>
+    <div id="characterSearch" style="display: none; margin-top: 10px;">
+      <input type="text" id="searchInput" placeholder="Nhập tên nhân vật...">
+      <button onclick="searchCharacter()">Tìm kiếm</button>
+    </div>
   </nav>
+
 
   <!-- Tiêu đề -->
   <div class="container my-5">
@@ -68,4 +73,34 @@
   </footer>
 
 </body>
+  <script>
+  function showSearch() {
+    document.getElementById("characterSearch").style.display = "block";
+  }
+
+  function searchCharacter() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    
+    // Map tên nhân vật tới file html tương ứng
+    const characters = {
+        "naruto": "../characters/naruto.html",
+        "sakura": "../characters/sakura.html",
+        "sasuke": "../characters/sasuke.html",
+        "luffy": "../characters/luffy.html",
+        "sanji": "../characters/sanji.html",
+        "zoro": "../characters/zoro.html",
+        "goku": "../characters/goku.html",
+        "tanjiro": "../characters/tanjiro.html",
+        "doraemon": "../characters/doraemon.html",
+        "nobita": "../characters/nobita.html",
+        "shizuka": "../characters/shizuka.html",
+    };
+
+    if (characters[query]) {
+      window.location.href = characters[query];
+    } else {
+      alert("Không tìm thấy nhân vật!");
+    }
+  }
+ </script> 
 </html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Haruno Sakura - Thông tin chi tiết | AnimeVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">AnimeVerse</a>
+      <div>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="../list.html">Danh sách</a></li>
+          <li class="nav-item"><a href="#" onclick="showSearch()">Nhân vật</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="characterSearch" style="display: none; margin-top: 10px;">
+      <input type="text" id="searchInput" placeholder="Nhập tên nhân vật...">
+      <button onclick="searchCharacter()">Tìm kiếm</button>
+    </div>
+  </nav>
+
+  <!-- Tiêu đề -->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4ce0e4c7-2337-4192-9e0d-b88ac169a09d/dfxspso-5111e7d5-4554-4890-a3eb-d020307f2b3b.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRjZTBlNGM3LTIzMzctNDE5Mi05ZTBkLWI4OGFjMTY5YTA5ZFwvZGZ4c3Bzby01MTExZTdkNS00NTU0LTQ4OTAtYTNlYi1kMDIwMzA3ZjJiM2IuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.wRW3UT1eXUqqYfwbLIRM3ZaBzxRkYE8Gsh9ntC7zL98" alt="Sakura" style="width: 200px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <div class="col-md-8">
+        <h1 class="text-danger">Haruno Sakura</h1>
+        <p><strong>Vai trò:</strong> Ninja y tế làng Lá, thành viên đội 7</p>
+        <p><strong>Biệt danh:</strong> Sakura siêu mạnh, nữ thần y thuật</p>
+        <p><strong>Năng lực:</strong> Sức mạnh thể chất vượt trội, Chakra điều khiển, Bách Hào Ấn</p>
+        <p><strong>Xuất hiện lần đầu:</strong> Tập 1 (Anime) / Chapter 3 (Manga)</p>
+        <p><strong>Link xem:</strong> 
+          <a href="https://animevietsubtv.io/phim/naruto-shippuden-5/" target="_blank" class="btn btn-outline-danger btn-sm">AnimeVietsub</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nội dung mô tả -->
+  <div class="container mb-5">
+    <h3>Giới thiệu</h3>
+    <p>
+      Haruno Sakura là một trong ba thành viên chính của đội 7 trong loạt anime Naruto. Ban đầu cô được biết đến với trí thông minh và khả năng kiểm soát chakra tốt, nhưng thiếu kỹ năng chiến đấu. Sau khi được huấn luyện bởi Tsunade – Hokage Đệ Ngũ, Sakura trở thành một ninja y thuật mạnh mẽ với sức mạnh thể chất đáng kinh ngạc.
+    </p>
+
+    <h4>Tính cách và sức mạnh</h4>
+    <ul>
+      <li>Thông minh, giàu cảm xúc và rất kiên định với lý tưởng</li>
+      <li>Được huấn luyện bởi Tsunade – truyền nhân của Hokage Đệ Nhất</li>
+      <li>Kỹ năng nổi bật: Bách Hào Ấn, chữa trị, đấm phá hủy</li>
+      <li>Là ninja y thuật hàng đầu với khả năng hỗ trợ và chiến đấu đều mạnh</li>
+      <li>Góp phần quan trọng trong Đại chiến Nhẫn giả lần thứ 4</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 AnimeVerse. Trang thông tin nhân vật Haruno Sakura.
+  </footer>
+
+  <!-- Script tìm kiếm -->
+  <script>
+    function showSearch() {
+      document.getElementById("characterSearch").style.display = "block";
+    }
+
+    function searchCharacter() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const characters = {
+        "naruto": "../characters/naruto.html",
+        "sakura": "../characters/sakura.html",
+        "sasuke": "../characters/sasuke.html",
+        "luffy": "../characters/luffy.html",
+        "sanji": "../characters/sanji.html",
+        "zoro": "../characters/zoro.html",
+        "goku": "../characters/goku.html",
+        "vegeta": "../characters/vegeta.html",
+        "tanjiro": "../characters/tanjiro.html",
+        "doraemon": "../characters/doraemon.html",
+        "nobita": "../characters/nobita.html",
+        "shizuka": "../characters/shizuka.html",
+      };
+
+      if (characters[query]) {
+        window.location.href = characters[query];
+      } else {
+        alert("Không tìm thấy nhân vật!");
+      }
+    }
+  </script>
+
+</body>
+</html>

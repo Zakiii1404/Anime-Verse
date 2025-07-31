@@ -18,9 +18,13 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
           <li class="nav-item"><a class="nav-link" href="list.html">Danh sách</a></li>
-          <li class="nav-item"><a class="nav-link" href="gioi-thieu.html">Giới thiệu</a></li>
+          <li class="nav-item"><a href="#" onclick="showSearch()">Nhân vật</a></li>
         </ul>
       </div>
+    </div>
+    <div id="characterSearch" style="display: none; margin-top: 10px;">
+  <input type="text" id="searchInput" placeholder="Nhập tên nhân vật...">
+  <button onclick="searchCharacter()">Tìm kiếm</button>
     </div>
   </nav>
 
@@ -38,7 +42,7 @@
   <div class="row align-items-center">
     <!-- Giới thiệu -->
     <div class="col-md-7">
-      <h2 class="fw-bold">🎌 Về <span class="text-warning">AnimeVerse</span></h2>
+      <h2 class="fw-bold"> Về <span class="text-warning">AnimeVerse</span></h2>
       <p class="lead">
         AnimeVerse là website wiki do nhóm sinh viên xây dựng nhằm tổng hợp kiến thức thú vị về các bộ anime nổi tiếng như <strong>Naruto</strong>, <strong>One Piece</strong>, <strong>Demon Slayer</strong> và nhiều hơn nữa.
       </p>
@@ -91,6 +95,34 @@
   <footer class="bg-dark text-white text-center py-3">
     &copy; 2025 AnimeVerse. Dự án học tập Đại học.
   </footer>
+  <script>
+  function showSearch() {
+    document.getElementById("characterSearch").style.display = "block";
+  }
 
+  function searchCharacter() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    
+    // Map tên nhân vật tới file html tương ứng
+    const characters = {
+        "naruto": "../characters/naruto.html",
+        "sakura": "../characters/sakura.html",
+        "sasuke": "../characters/sasuke.html",
+        "luffy": "../characters/luffy.html",
+        "sanji": "../characters/sanji.html",
+        "zoro": "../characters/zoro.html",
+        "goku": "../characters/goku.html",
+        "tanjiro": "../characters/tanjiro.html",
+        "doraemon": "../characters/doraemon.html",
+        "nobita": "../characters/nobita.html",
+        "shizuka": "../characters/shizuka.html",
+    };
+    if (characters[query]) {
+      window.location.href = characters[query];
+    } else {
+      alert("Không tìm thấy nhân vật!");
+    }
+  }
+ </script> 
 </body>
 </html>

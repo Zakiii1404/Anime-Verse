@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Roronoa Zoro - Thông tin chi tiết | AnimeVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">AnimeVerse</a>
+      <div>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="../list.html">Danh sách</a></li>
+          <li class="nav-item"><a href="#" onclick="showSearch()">Nhân vật</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="characterSearch" style="display: none; margin-top: 10px;">
+      <input type="text" id="searchInput" placeholder="Nhập tên nhân vật...">
+      <button onclick="searchCharacter()">Tìm kiếm</button>
+    </div>
+  </nav>
+
+  <!-- Tiêu đề -->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="https://wallpapercave.com/wp/wp9063154.jpg" alt="Zoro" style="width: 200px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <div class="col-md-8">
+        <h1 class="text-success">Roronoa Zoro</h1>
+        <p><strong>Vai trò:</strong> Kiếm sĩ của băng Mũ Rơm</p>
+        <p><strong>Biệt danh:</strong> Thợ săn hải tặc</p>
+        <p><strong>Vũ khí:</strong> Ba thanh kiếm (Tam kiếm phái)</p>
+        <p><strong>Xuất hiện lần đầu:</strong> Tập 2 (Anime) / Chapter 3 (Manga)</p>
+        <p><strong>Link xem:</strong> 
+          <a href="https://animevietsubtv.io/phim/dao-hai-tac-one-piece-316/" target="_blank" class="btn btn-outline-success btn-sm">AnimeVietsub</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nội dung mô tả -->
+  <div class="container mb-5">
+    <h3>Giới thiệu</h3>
+    <p>
+      Roronoa Zoro là kiếm sĩ mạnh mẽ và trung thành trong băng hải tặc Mũ Rơm. Anh nổi bật với phong cách "tam kiếm phái" độc đáo, sử dụng 3 thanh kiếm cùng lúc – kể cả ngậm 1 thanh trong miệng. Zoro có ý chí kiên cường, luôn hướng đến mục tiêu trở thành kiếm sĩ mạnh nhất thế giới để thực hiện lời hứa với người bạn thời thơ ấu.
+    </p>
+
+    <h4>Tính cách và sức mạnh</h4>
+    <ul>
+      <li>Trung thành tuyệt đối với thuyền trưởng Luffy</li>
+      <li>Rất nghiêm túc trong chiến đấu và luyện tập</li>
+      <li>Khả năng định hướng tệ, hay đi lạc</li>
+      <li>Có Haki Vũ trang và Haki Quan sát</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 AnimeVerse. Trang thông tin nhân vật Roronoa Zoro.
+  </footer>
+
+  <!-- Script tìm kiếm -->
+  <script>
+    function showSearch() {
+      document.getElementById("characterSearch").style.display = "block";
+    }
+
+    function searchCharacter() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const characters = {
+        "naruto": "../characters/naruto.html",
+        "sakura": "../characters/sakura.html",
+        "sasuke": "../characters/sasuke.html",
+        "luffy": "../characters/luffy.html",
+        "sanji": "../characters/sanji.html",
+        "zoro": "../characters/zoro.html",
+        "goku": "../characters/goku.html",
+        "vegeta": "../characters/vegeta.html",
+        "tanjiro": "../characters/tanjiro.html",
+        "doraemon": "../characters/doraemon.html",
+        "nobita": "../characters/nobita.html",
+        "shizuka": "../characters/shizuka.html",
+      };
+
+      if (characters[query]) {
+        window.location.href = characters[query];
+      } else {
+        alert("Không tìm thấy nhân vật!");
+      }
+    }
+  </script>
+
+</body>
+</html>

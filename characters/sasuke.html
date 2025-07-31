@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Uchiha Sasuke - Thông tin chi tiết | AnimeVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">AnimeVerse</a>
+      <div>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="../list.html">Danh sách</a></li>
+          <li class="nav-item"><a href="#" onclick="showSearch()">Nhân vật</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="characterSearch" style="display: none; margin-top: 10px;">
+      <input type="text" id="searchInput" placeholder="Nhập tên nhân vật...">
+      <button onclick="searchCharacter()">Tìm kiếm</button>
+    </div>
+  </nav>
+
+  <!-- Tiêu đề -->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.1wVJENxxisN5ug5t1U7f8AHaNK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sasuke" style="width: 200px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <div class="col-md-8">
+        <h1 class="text-primary">Uchiha Sasuke</h1>
+        <p><strong>Vai trò:</strong> Ninja làng Lá, người sống sót cuối cùng của tộc Uchiha</p>
+        <p><strong>Biệt danh:</strong> Kẻ phản bội, Thiên tài Uchiha</p>
+        <p><strong>Năng lực:</strong> Sharingan, Rinnegan, Chidori, Susanoo, Amaterasu</p>
+        <p><strong>Xuất hiện lần đầu:</strong> Tập 1 (Anime) / Chapter 3 (Manga)</p>
+        <p><strong>Link xem:</strong> 
+          <a href="https://animevietsubtv.io/phim/naruto-shippuden-5/" target="_blank" class="btn btn-outline-primary btn-sm">AnimeVietsub</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nội dung mô tả -->
+  <div class="container mb-5">
+    <h3>Giới thiệu</h3>
+    <p>
+      Uchiha Sasuke là một trong những nhân vật chính trong loạt anime Naruto. Xuất thân từ tộc Uchiha – một trong những gia tộc mạnh nhất làng Lá, Sasuke mất cả gia đình khi còn nhỏ dưới tay người anh trai Itachi. Từ đó, cậu sống trong thù hận và khao khát trả thù. Trải qua nhiều biến cố, Sasuke từ bỏ con đường báo thù để bảo vệ thế giới nhẫn giả cùng Naruto.
+    </p>
+
+    <h4>Tính cách và sức mạnh</h4>
+    <ul>
+      <li>Lạnh lùng, quyết đoán và luôn theo đuổi lý tưởng của riêng mình</li>
+      <li>Sở hữu Sharingan và Rinnegan – hai loại nhãn thuật huyền thoại</li>
+      <li>Kỹ thuật nổi bật: Chidori, Amaterasu, Susanoo, Địa chuyển không gian</li>
+      <li>Kỹ năng chiến đấu cận chiến và chiến thuật rất tinh tế</li>
+      <li>Là ninja có sức mạnh sánh ngang với Naruto – người bảo vệ trong bóng tối</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 AnimeVerse. Trang thông tin nhân vật Uchiha Sasuke.
+  </footer>
+
+  <!-- Script tìm kiếm -->
+  <script>
+    function showSearch() {
+      document.getElementById("characterSearch").style.display = "block";
+    }
+
+    function searchCharacter() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const characters = {
+        "naruto": "../characters/naruto.html",
+        "sakura": "../characters/sakura.html",
+        "sasuke": "../characters/sasuke.html",
+        "luffy": "../characters/luffy.html",
+        "sanji": "../characters/sanji.html",
+        "zoro": "../characters/zoro.html",
+        "goku": "../characters/goku.html",
+        "vegeta": "../characters/vegeta.html",
+        "tanjiro": "../characters/tanjiro.html",
+        "doraemon": "../characters/doraemon.html",
+        "nobita": "../characters/nobita.html",
+        "shizuka": "../characters/shizuka.html",
+      };
+
+      if (characters[query]) {
+        window.location.href = characters[query];
+      } else {
+        alert("Không tìm thấy nhân vật!");
+      }
+    }
+  </script>
+
+</body>
+</html>

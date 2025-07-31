@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hatake Kakashi - Thông tin chi tiết | AnimeVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">AnimeVerse</a>
+      <div>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="../list.html">Danh sách</a></li>
+          <li class="nav-item"><a href="#" onclick="showSearch()">Nhân vật</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="characterSearch" style="display: none; margin-top: 10px;">
+      <input type="text" id="searchInput" placeholder="Nhập tên nhân vật...">
+      <button onclick="searchCharacter()">Tìm kiếm</button>
+    </div>
+  </nav>
+
+  <!-- Tiêu đề -->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="https://th.bing.com/th/id/OIP.FFofZ_wDic6q1mBnclEoZwHaNL?w=187&h=333&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Kakashi" style="width: 200px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <div class="col-md-8">
+        <h1 class="text-warning">Hatake Kakashi</h1>
+        <p><strong>Vai trò:</strong> Thầy giáo của Đội 7, Hokage Đệ Lục của Làng Lá</p>
+        <p><strong>Biệt danh:</strong> Kakashi Copy Ninja, Kakashi Sharingan</p>
+        <p><strong>Năng lực:</strong> Sharingan, Raikiri (Chidori), chiến thuật thiên tài, Hỏa – Lôi – Thổ – Thủy thuật</p>
+        <p><strong>Xuất hiện lần đầu:</strong> Chapter 3 (Manga) / Tập 3 (Anime)</p>
+        <p><strong>Link xem:</strong> 
+          <a href="https://animevietsubtv.io/phim/naruto-11/" target="_blank" class="btn btn-outline-warning btn-sm">AnimeVietsub</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nội dung mô tả -->
+  <div class="container mb-5">
+    <h3>Giới thiệu</h3>
+    <p>
+      Hatake Kakashi là một trong những ninja tài giỏi nhất Làng Lá, nổi tiếng với biệt danh “Ninja sao chép” vì đã sao chép hơn 1000 nhẫn thuật nhờ Sharingan. Anh từng là học trò của Hokage Đệ Tứ – Namikaze Minato, và sau này là thầy của nhóm Naruto, Sasuke, và Sakura. Tính cách bình thản, đôi khi hơi lười biếng nhưng vô cùng sâu sắc và tận tâm với học trò.
+    </p>
+
+    <h4>Tính cách và sức mạnh</h4>
+    <ul>
+      <li>Lạnh lùng nhưng ẩn chứa tình cảm sâu sắc, từng mất mát nhiều trong quá khứ</li>
+      <li>Sử dụng Sharingan thành thạo, từng thi triển Mangekyō Sharingan (Kamui)</li>
+      <li>Chiến thuật thiên tài – luôn nghĩ trước một bước trong chiến đấu</li>
+      <li>Raikiri (Chidori) – chiêu thức lôi điện cực mạnh do chính anh sáng tạo</li>
+      <li>Thông thạo nhiều loại nhẫn thuật từ các hệ khác nhau</li>
+      <li>Là Hokage Đệ Lục – người lãnh đạo Làng Lá sau Đại Chiến Nhẫn Giả</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 AnimeVerse. Trang thông tin nhân vật Hatake Kakashi.
+  </footer>
+
+  <!-- Script tìm kiếm -->
+  <script>
+    function showSearch() {
+      document.getElementById("characterSearch").style.display = "block";
+    }
+
+    function searchCharacter() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const characters = {
+        "naruto": "../characters/naruto.html",
+        "sakura": "../characters/sakura.html",
+        "sasuke": "../characters/sasuke.html",
+        "luffy": "../characters/luffy.html",
+        "sanji": "../characters/sanji.html",
+        "zoro": "../characters/zoro.html",
+        "goku": "../characters/goku.html",
+        "vegeta": "../characters/vegeta.html",
+        "tanjiro": "../characters/tanjiro.html",
+        "doraemon": "../characters/doraemon.html",
+        "nobita": "../characters/nobita.html",
+        "shizuka": "../characters/shizuka.html",
+        "kakashi": "../characters/kakashi.html"
+      };
+
+      if (characters[query]) {
+        window.location.href = characters[query];
+      } else {
+        alert("Không tìm thấy nhân vật!");
+      }
+    }
+  </script>
+
+</body>
+</html>

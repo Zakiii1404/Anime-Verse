@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kamado Tanjiro - Thông tin chi tiết | AnimeVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">AnimeVerse</a>
+      <div>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="../list.html">Danh sách</a></li>
+          <li class="nav-item"><a href="#" onclick="showSearch()">Nhân vật</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="characterSearch" style="display: none; margin-top: 10px;">
+      <input type="text" id="searchInput" placeholder="Nhập tên nhân vật...">
+      <button onclick="searchCharacter()">Tìm kiếm</button>
+    </div>
+  </nav>
+
+  <!-- Tiêu đề -->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.JZITJJWWACSb1W6uAIz_gQHaNK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Tanjiro" style="width: 200px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <div class="col-md-8">
+        <h1 class="text-danger">Kamado Tanjiro</h1>
+        <p><strong>Vai trò:</strong> Kiếm sĩ diệt quỷ</p>
+        <p><strong>Biệt danh:</strong> Tanjiro Mũi thính</p>
+        <p><strong>Hơi thở:</strong> Hơi thở Nước & Hơi thở Mặt Trời</p>
+        <p><strong>Xuất hiện lần đầu:</strong> Tập 1 (Anime) / Chapter 1 (Manga)</p>
+        <p><strong>Link xem:</strong> 
+          <a href="https://animevietsubtv.io/phim/kimetsu-no-yaiba-thanh-guom-diet-quy-3939/" target="_blank" class="btn btn-outline-danger btn-sm">AnimeVietsub</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nội dung mô tả -->
+  <div class="container mb-5">
+    <h3>Giới thiệu</h3>
+    <p>
+      Kamado Tanjiro là nhân vật chính trong anime Kimetsu no Yaiba. Xuất thân từ một gia đình nghèo trên núi, cậu từng sống yên bình cho đến khi cả gia đình bị quỷ sát hại, chỉ còn em gái Nezuko sống sót nhưng bị biến thành quỷ. Tanjiro quyết tâm trở thành kiếm sĩ diệt quỷ để tìm cách cứu em gái và tiêu diệt Muzan – kẻ đã phá hoại gia đình cậu.
+    </p>
+
+    <h4>Tính cách và sức mạnh</h4>
+    <ul>
+      <li>Tốt bụng, kiên nhẫn và đồng cảm ngay cả với kẻ thù</li>
+      <li>Mùi hương cực kỳ nhạy bén, có thể phân biệt cảm xúc và hành động</li>
+      <li>Sử dụng Hơi thở Nước và sau này là Hơi thở Mặt Trời</li>
+      <li>Kỹ năng chiến đấu linh hoạt và thông minh</li>
+      <li>Ý chí kiên cường, không bao giờ bỏ cuộc trước nghịch cảnh</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 AnimeVerse. Trang thông tin nhân vật Kamado Tanjiro.
+  </footer>
+
+  <!-- Script tìm kiếm -->
+  <script>
+    function showSearch() {
+      document.getElementById("characterSearch").style.display = "block";
+    }
+
+    function searchCharacter() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const characters = {
+        "naruto": "../characters/naruto.html",
+        "sakura": "../characters/sakura.html",
+        "sasuke": "../characters/sasuke.html",
+        "luffy": "../characters/luffy.html",
+        "sanji": "../characters/sanji.html",
+        "zoro": "../characters/zoro.html",
+        "goku": "../characters/goku.html",
+        "vegeta": "../characters/vegeta.html",
+        "tanjiro": "../characters/tanjiro.html",
+        "doraemon": "../characters/doraemon.html",
+        "nobita": "../characters/nobita.html",
+        "shizuka": "../characters/shizuka.html",
+      };
+
+      if (characters[query]) {
+        window.location.href = characters[query];
+      } else {
+        alert("Không tìm thấy nhân vật!");
+      }
+    }
+  </script>
+
+</body>
+</html>

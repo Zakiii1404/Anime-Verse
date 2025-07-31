@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Monkey D. Luffy - Thông tin chi tiết | AnimeVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">AnimeVerse</a>
+      <div>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="../list.html">Danh sách</a></li>
+          <li class="nav-item"><a href="#" onclick="showSearch()">Nhân vật</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="characterSearch" style="display: none; margin-top: 10px;">
+      <input type="text" id="searchInput" placeholder="Nhập tên nhân vật...">
+      <button onclick="searchCharacter()">Tìm kiếm</button>
+    </div>
+  </nav>
+
+  <!-- Tiêu đề -->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.IqMr9fIkf_XVlULjVCY7wgHaMP?pid=ImgDet&w=184&h=304&c=7&dpr=1.3&o=7&rm=3" alt="Luffy" style="width: 200px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <div class="col-md-8">
+        <h1 class="text-danger">Monkey D. Luffy</h1>
+        <p><strong>Vai trò:</strong> Thuyền trưởng băng Mũ Rơm</p>
+        <p><strong>Biệt danh:</strong> Mũ Rơm Luffy</p>
+        <p><strong>Trái ác quỷ:</strong> Gomu Gomu no Mi (Hito Hito no Mi, Model: Nika)</p>
+        <p><strong>Xuất hiện lần đầu:</strong> Tập 1 (Anime) / Chapter 1 (Manga)</p>
+        <p><strong>Link xem:</strong> 
+          <a href="https://animevietsubtv.io/phim/dao-hai-tac-one-piece-316/" target="_blank" class="btn btn-outline-danger btn-sm">AnimeVietsub</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nội dung mô tả -->
+  <div class="container mb-5">
+    <h3>Giới thiệu</h3>
+    <p>
+      Monkey D. Luffy là nhân vật chính của One Piece – một cậu bé đầy mơ ước với ước mơ trở thành Vua Hải Tặc. Sau khi ăn trái Gomu Gomu no Mi, cơ thể Luffy trở nên co giãn như cao su. Cậu là người luôn lạc quan, vô tư, nhưng lại có một trái tim mạnh mẽ và không bao giờ bỏ cuộc, sẵn sàng chiến đấu để bảo vệ bạn bè và lý tưởng của mình.
+    </p>
+
+    <h4>Tính cách và sức mạnh</h4>
+    <ul>
+      <li>Vui vẻ, lạc quan, luôn đặt bạn bè lên hàng đầu</li>
+      <li>Ý chí mạnh mẽ, không ngại đối đầu với kẻ mạnh</li>
+      <li>Sở hữu Haki Bá Vương, Haki Vũ Trang, Haki Quan Sát</li>
+      <li>Trái ác quỷ giúp co giãn và biến hóa cơ thể</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 AnimeVerse. Trang thông tin nhân vật Monkey D. Luffy.
+  </footer>
+
+  <!-- Script tìm kiếm -->
+  <script>
+    function showSearch() {
+      document.getElementById("characterSearch").style.display = "block";
+    }
+
+    function searchCharacter() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const characters = {
+        "naruto": "../characters/naruto.html",
+        "sakura": "../characters/sakura.html",
+        "sasuke": "../characters/sasuke.html",
+        "luffy": "../characters/luffy.html",
+        "sanji": "../characters/sanji.html",
+        "zoro": "../characters/zoro.html",
+        "goku": "../characters/goku.html",
+        "vegeta": "../characters/vegeta.html",
+        "tanjiro": "../characters/tanjiro.html",
+        "doraemon": "../characters/doraemon.html",
+        "nobita": "../characters/nobita.html",
+        "shizuka": "../characters/shizuka.html",
+      };
+
+      if (characters[query]) {
+        window.location.href = characters[query];
+      } else {
+        alert("Không tìm thấy nhân vật!");
+      }
+    }
+  </script>
+
+</body>
+</html>

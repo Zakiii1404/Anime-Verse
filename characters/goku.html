@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Son Goku - Thông tin chi tiết | AnimeVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">AnimeVerse</a>
+      <div>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="../list.html">Danh sách</a></li>
+          <li class="nav-item"><a href="#" onclick="showSearch()">Nhân vật</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="characterSearch" style="display: none; margin-top: 10px;">
+      <input type="text" id="searchInput" placeholder="Nhập tên nhân vật...">
+      <button onclick="searchCharacter()">Tìm kiếm</button>
+    </div>
+  </nav>
+
+  <!-- Tiêu đề -->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="https://th.bing.com/th/id/OIP.jjiml4VV_CrhsYz2x_34bAHaKd?w=208&h=294&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Goku" style="width: 200px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <div class="col-md-8">
+        <h1 class="text-warning">Son Goku</h1>
+        <p><strong>Vai trò:</strong> Nhân vật chính của loạt truyện Dragon Ball</p>
+        <p><strong>Biệt danh:</strong> Kakarot, Chiến binh Saiyan huyền thoại</p>
+        <p><strong>Năng lực:</strong> Super Saiyan, Ultra Instinct, Kamehameha, dịch chuyển tức thời</p>
+        <p><strong>Xuất hiện lần đầu:</strong> Chapter 1 (Manga) / Tập 1 (Anime)</p>
+        <p><strong>Link xem:</strong> 
+          <a href="https://animevietsubtv.io/phim/7-vien-ngoc-rong-super-dragon-ball-super-3382/" target="_blank" class="btn btn-outline-warning btn-sm">AnimeVietsub</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nội dung mô tả -->
+  <div class="container mb-5">
+    <h3>Giới thiệu</h3>
+    <p>
+      Son Goku là chiến binh người Saiyan đến từ hành tinh Vegeta, được gửi đến Trái Đất khi còn nhỏ. Anh lớn lên trong một gia đình con người và trở thành người hùng bảo vệ hành tinh. Goku sở hữu sức mạnh không giới hạn, luôn tìm kiếm đối thủ mạnh để thử sức. Tính cách hồn nhiên, chính trực và giàu lòng nhân ái, Goku là hình mẫu lý tưởng của một chiến binh bất khuất.
+    </p>
+
+    <h4>Tính cách và sức mạnh</h4>
+    <ul>
+      <li>Luôn vui vẻ, ngây thơ nhưng cực kỳ nghiêm túc trong chiến đấu</li>
+      <li>Biến hình nhiều cấp độ: Super Saiyan, Super Saiyan Blue, Ultra Instinct</li>
+      <li>Chiêu thức nổi tiếng: Kamehameha, Genki Dama, Kaioken</li>
+      <li>Khả năng dịch chuyển tức thời và học hỏi nhanh chóng</li>
+      <li>Sức mạnh tăng dần sau mỗi trận chiến nhờ đặc điểm người Saiyan</li>
+      <li>Là người duy nhất đạt Ultra Instinct hoàn chỉnh trong vũ trụ 7</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 AnimeVerse. Trang thông tin nhân vật Son Goku.
+  </footer>
+
+  <!-- Script tìm kiếm -->
+  <script>
+    function showSearch() {
+      document.getElementById("characterSearch").style.display = "block";
+    }
+
+    function searchCharacter() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const characters = {
+        "naruto": "../characters/naruto.html",
+        "sakura": "../characters/sakura.html",
+        "sasuke": "../characters/sasuke.html",
+        "luffy": "../characters/luffy.html",
+        "sanji": "../characters/sanji.html",
+        "zoro": "../characters/zoro.html",
+        "goku": "../characters/goku.html",
+        "vegeta": "../characters/vegeta.html",
+        "tanjiro": "../characters/tanjiro.html",
+        "doraemon": "../characters/doraemon.html",
+        "nobita": "../characters/nobita.html",
+        "shizuka": "../characters/shizuka.html",
+        "kakashi": "../characters/kakashi.html"
+      };
+
+      if (characters[query]) {
+        window.location.href = characters[query];
+      } else {
+        alert("Không tìm thấy nhân vật!");
+      }
+    }
+  </script>
+
+</body>
+</html>

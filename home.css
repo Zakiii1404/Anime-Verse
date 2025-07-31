@@ -4,3 +4,9 @@
     object-fit: cover; /* Đảm bảo ảnh lấp đầy */
     height: 150px;    /* Hoặc đặt chiều cao cố định */
 }
+.character-image {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
